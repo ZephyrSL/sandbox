@@ -1,5 +1,34 @@
-<html><body>
-  <canvas id="mycanvas" width="150" height="150" style="position: relative; left:100; top: 25; background-color:#CCCCFF">
-    Fallback content goes here
-  </canvas>
-</body></html>
+<!DOCTYPE html>
+<html>
+  <!-- Load Theme -->
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen" />
+    <!-- <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print" /> -->
+
+    <script src="../javascripts/pathAPI.js"></script>
+
+    <title>Canvas</title>
+  </head>
+
+  <body onload="draw();">
+    <header>
+      <div class="container">
+        <h1>Canvas</h1>
+        <h2></h2>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+      <!-- main content starts here -->
+
+      <canvas id="pathAPICanvas" width="500" height="500" style="position:relative; left:100; top:25; background-color:#CCCCFF">
+        <!-- Fallback content goes here -->
+      </canvas>
+    </div>
+  </body>
+</html>
