@@ -14,7 +14,7 @@
     <title>Canvas</title>
   </head>
 
-  <body onload="draw();">
+  <body>
     <header>
       <div class="container">
         <h1>Canvas</h1>
@@ -26,9 +26,29 @@
       <section id="main_content">
       <!-- main content starts here -->
 
-      <canvas id="pathAPICanvas" width="500" height="500" style="position:relative; left:100; top:25; background-color:#CCCCFF">
+      <canvas id="pathAPICanvas" width="600" height="500" style="position:relative; left:100; top:25; background-color:#CCCCFF" onclick="pathAPICanvasDraw();">
         <!-- Fallback content goes here -->
       </canvas>
     </div>
+
+    <script type="application/javascript">
+      function pathAPICanvasInit() {
+        var canvas = document.getElementById("pathAPICanvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+
+          drawString(ctx, "I'm laughing! XDDD", 20, 40);
+
+          ctx.lineWidth=5;
+          ctx.strokeStyle = "blue";
+
+          // issue drawing commands here
+          drawFace(ctx);
+        }
+      }
+
+      pathAPICanvasInit();
+    </script>
+
   </body>
 </html>
