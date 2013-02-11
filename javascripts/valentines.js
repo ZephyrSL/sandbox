@@ -13,11 +13,11 @@ function sample_axis (samples, from, to, interval) {
 
 function xFunc (t) {
     var s = Math.sin(t)
-    return 10 * 16 * s * s * s;
+    return 16 * s * s * s;
 }
 
 function yFunc (t) {
-    return -10 * (13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
+    return -(13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
 }
 
 
