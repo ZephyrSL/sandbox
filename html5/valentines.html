@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css"
+        media="screen" />
+        <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css"
+        media="screen" />
+        <title>
+            Valentine's Gift
+        </title>
+        <script src="../javascripts/valentines.js">
+
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <h1>
+                    Valentine's Gift
+                </h1>
+            </div>
+        </header>
+                <canvas id="heartCanvas">
+                </canvas>
+
+        <script type="application/javascript">
+            function drawHeartInit() {
+                sample_axis(axis_samples, 0, 2 * Math.PI, 0.01);
+                x_samples = axis_samples.map(xFunc);
+                y_samples = axis_samples.map(yFunc);
+
+                var canvas = document.getElementById("heartCanvas");
+                if (canvas.getContext) {
+                    var ctx = canvas.getContext("2d");
+                    ctx.canvas.width  = window.innerWidth;
+                    ctx.canvas.height = window.innerHeight;
+
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = "red";
+                    drawHeart(ctx, ctx.canvas.width/2, ctx.canvas.height/2, -Math.PI/4);
+
+                    ctx.strokeStyle = "pink";
+                    drawHeart(ctx, ctx.canvas.width/2 + 100, ctx.canvas.height/2 - 75, Math.PI/4);
+                }
+            }
+
+            drawHeartInit();
+        </script>
+    </body>
+
+</html>
